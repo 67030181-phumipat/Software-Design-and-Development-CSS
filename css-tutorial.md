@@ -396,9 +396,143 @@ background-size: cover;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ดที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="product-container">
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://media.istockphoto.com/id/1208526340/th/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B8%9B%E0%B8%B4%E0%B8%94%E0%B9%84%E0%B8%81%E0%B9%88%E0%B8%97%E0%B8%AD%E0%B8%94%E0%B8%9A%E0%B8%99%E0%B8%88%E0%B8%B2%E0%B8%99%E0%B8%AA%E0%B8%B5%E0%B8%82%E0%B8%B2%E0%B8%A7%E0%B9%81%E0%B8%A2%E0%B8%81%E0%B8%9A%E0%B8%99%E0%B9%82%E0%B8%95%E0%B9%8A%E0%B8%B0-%E0%B8%94%E0%B8%B9%E0%B8%AD%E0%B8%A3%E0%B9%88%E0%B8%AD%E0%B8%A2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%AA%E0%B8%B5%E0%B9%80%E0%B8%AB%E0%B8%A5%E0%B8%B7%E0%B8%AD%E0%B8%87%E0%B8%97%E0%B8%AD%E0%B8%87.jpg?s=612x612&w=0&k=20&c=RfhAauUt3f_S4aPur9Bq2Cq5UCWKW_ABNz1idcFZiuU=">
+            </div>
+            <div class="product-info">
+                <h2 class="product-title">ไก่ทอดกรอบ</h2>
+                <p class="product-price">฿79</p>
+                <p class="product-description">สูตรดั้งเดิม</p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://tecnogasthai.com/wp-content/uploads/2023/05/1_008.webp">
+            </div>
+            <div class="product-info">
+                <h2 class="product-title">ไก่ทอดเกาหลี</h2>
+                <p class="product-price">฿89</p>
+                <p class="product-description">สูตรดั้งเดิม</p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://fit-d.com/uploads/food/3a3ff39fed68cb8b06e0eebbc97b0d40.jpg">
+            </div>
+            <div class="product-info">
+                <h2 class="product-title">ไก่ทอดน้ำปลา</h2>
+                <p class="product-price">฿79</p>
+                <p class="product-description">สูตรดั้งเดิม</p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://png.pngtree.com/thumb_back/fh260/background/20220601/pngtree-deep-fried-chicken-tendons-crunchy-fried-meat-photo-image_13762256.jpg">
+            </div>
+            <div class="product-info">
+                <h2 class="product-title">เอ็นไก่ทอด</h2>
+                <p class="product-price">฿149</p>
+                <p class="product-description">สูตรดั้งเดิม</p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+
+```css
+body {
+    text-align: center; /* จัดให้อยู่ตรงกลาง */
+    background-color: #f8f9fa;
+}
+
+.product-card {
+    display: inline-block; /* ทำให้สินค้าเรียงต่อกัน */
+    width: 250px; /* กำหนดขนาดสินค้า */
+    margin: 10px; /* กำหนดระยะห่างระหว่างสินค้า */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: white;
+    text-align: center;
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #fff;
+}
+
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* ปรับให้รูปไม่ถูกตัดขอบ */
+}
+ 
+
+.product-info {
+    padding: 15px;
+}
+
+.product-title {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    color: #007bff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.product-description {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.product-button {
+    display: block;
+    background: linear-gradient(to right, #007bff, #0056b3);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+
+.product-button:hover {
+    background: linear-gradient(to right, #0056b3, #003980);
+}
+```
+
+![image](https://github.com/user-attachments/assets/ca104cd5-d54e-4c03-a882-db37abc28b6f)
+
 
 [](#การทดลองที่-4-การจัดการขนาดและระยะห่าง)
 ## การทดลองที่ 4: การจัดการขนาดและระยะห่าง
