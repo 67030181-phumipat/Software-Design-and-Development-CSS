@@ -1041,12 +1041,118 @@ blockquote {
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="product-grid">
+        <!-- สินค้าชิ้นที่ 1 -->
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('https://hisojapan.com/wp-content/uploads/2018/12/sushi-kyoto-2-1.jpg')"></div>
+            <div class="product-details">
+                <h3 class="product-title">Mixed Shushi</h3>
+                <div class="product-price">฿399</div>
+                <div class="product-action">
+                    <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- สินค้าชิ้นที่ 2 -->
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('https://www.ryoiireview.com/upload/article/201711/1511853189_ffe70a736d2c3e8e2921d2f9ff1d8fe4.jpg')"></div>
+            <div class="product-details">
+                <h3 class="product-title">Mixed Salmon</h3>
+                <div class="product-price">฿599</div>
+                <div class="product-action">
+                    <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- เพิ่มสินค้าอื่นๆ ตามต้องการ -->
+    </div>
+</body>
+</html>
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    background-color: #f5f5f5;
+    background-size: cover;
+    background-position: center;
+}
+
+.product-details {
+    padding: 15px;
+}
+
+.product-title {
+    font-size: 1.1rem;
+    margin: 0 0 10px 0;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.product-price {
+    font-size: 1.2rem;
+    color: #007bff;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.product-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.add-to-cart {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-to-cart:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![image](https://github.com/user-attachments/assets/025cc17a-dec2-46c9-be3d-b9b8c64d3644)
+
 
 
 ### ตัวอย่างการใช้งาน: การสร้างเลย์เอาต์ Modern Dashboard
