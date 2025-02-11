@@ -854,10 +854,64 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+ <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" class="menu-item">หน้าแรก</a></li>
+            <li><a href="#" class="menu-item" id="active">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+nav {
+    background-color: #ff9100;
+    padding: 15px;
+}
+
+/* การใช้ Descendant Selector */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* การใช้ Child Selector */
+nav > ul > li {
+    margin: 0 10px;
+}
+
+/* การใช้ Class Selector */
+.menu-item {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    
+}
+
+/* การใช้ Pseudo-class */
+.menu-item:hover {
+    background-color: #555;
+    border-radius: 3px;
+}
+
+/* การใช้ ID Selector */
+#active {
+    background-color: #007bff;
+    border-radius: 3px;
+}
+
+
 ```
-[บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![image](https://github.com/user-attachments/assets/302577e0-7ed8-4060-94f4-56f5ebdc0be4)
+
 
